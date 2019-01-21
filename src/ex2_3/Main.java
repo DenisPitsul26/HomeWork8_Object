@@ -1,5 +1,7 @@
 package ex2_3;
 
+import java.util.Deque;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -13,7 +15,7 @@ public class Main {
         blackList.addClass(String.class);
         blackList.addClass(Long.class);
 
-        Stack stack = new Stack(blackList);
+        /*Stack stack = new Stack(blackList);
         stack.addObject(numberInt);
         stack.addObject(numberDouble);
         stack.addObject(numberLong);
@@ -23,7 +25,22 @@ public class Main {
         System.out.println(stack.getAndDeleteObject().toString());
         System.out.println(stack.getObject().toString());
 
-        System.out.println(stack);
+        System.out.println(stack);*/
+
+        StackWithoutList stackWithoutList = new StackWithoutList(blackList);
+        stackWithoutList.push(numberInt);
+        stackWithoutList.push(numberDouble);
+        stackWithoutList.push(numberLong);
+        stackWithoutList.push(object);
+        stackWithoutList.push(word);
+
+        System.out.println(stackWithoutList.pop().toString());
+        System.out.println(stackWithoutList.peek().toString());
+
+        System.out.println(stackWithoutList);
+
+
+
 
     }
 }

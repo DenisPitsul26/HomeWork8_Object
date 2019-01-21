@@ -47,6 +47,13 @@ public class Stack {
         return objectList.get(objectList.size()-1);
     }
 
+    public void clearOfStack() {
+        int tempLength = objectList.size();
+        for (int i = 0; i < tempLength; i++) {
+            objectList.remove(0);
+        }
+    }
+
     private boolean isObjectAlreadyInTheList(Object object){
         for (Object aObjectList : objectList) {
             if (aObjectList.equals(object)) {
